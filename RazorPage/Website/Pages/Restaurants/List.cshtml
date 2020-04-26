@@ -20,10 +20,24 @@
     </div>
 </form>
 
-@foreach (var restaurant in Model.Restaurants)
-{
-    <partial name="_Summary" model="restaurant" />
-}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var restaurant in Model.Restaurants)
+        {
+            <partial name="_Summary" model="restaurant" />
+        }
+    </tbody>
+
+</table>
+
 
 <a asp-page="./Edit" class="btn btn-outline-primary">Add New</a>
 
